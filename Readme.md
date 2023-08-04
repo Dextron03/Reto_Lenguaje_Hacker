@@ -1,5 +1,7 @@
 # Reto 2: Lenguaje Hacker (Leet Speak) - Transformador de Texto
 
+> Dificultad: Media | Publicación: 16/01/23 | Realizado: 4/8/2023
+
 >Este es un programa simple en Python que permite transformar un texto ingresado por el usuario en "lenguaje hacker", también conocido como "leet" o "1337". El lenguaje hacker se caracteriza por reemplazar caracteres alfanuméricos con otros símbolos y números.
 
 ------------
