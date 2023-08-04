@@ -11,11 +11,11 @@ print("""
   +===============================================================================+
       """)
 
-def usuarioTexto():
-  usuario : str= input("Ingrese un texto --> ")
-  return usuario
+def usuarioTexto(): #Esta función solicita al usuario que ingrese un texto y devuelve la entrada como una cadena/str.
+    usuario: str = input("Ingrese un texto --> ")
+    return usuario
 
-leet : dict = {
+leet : dict = { # Diccionario el cual contiene los caracteres del legnuaje leet segundo el alfabeto.
       ' ': ' ',
     'a': '4',
     'b': 'I3',
@@ -56,11 +56,20 @@ leet : dict = {
 
 text_usuaio = usuarioTexto()
 
-Lenguaje_hacker : list = []
+Lenguaje_hacker : list = [] #Esta lista alamecena los caracters dados por el usuario y luego dentro de ella se convierten en legnauje leet.
 
-for i in text_usuaio:
-  Lenguaje_hacker.append(i)
-  for rec_dict in leet:
-    if i == rec_dict:
-      print()
+ind_dl : int= 0 # Esta variable representa el índice de la lista 'Lenguaje_hacker'.
+for i in text_usuaio: # Iteramos sobre cada carácter del texto ingresado por el usuario.
+  Lenguaje_hacker.append(i) # Agregamos cada carácter a la lista 'Lenguaje_hacker'.
+  for rec_dict in leet: # Buscamos la transformación leet para cada carácter y lo agregamos a la lista.
+    if i == rec_dict: # Validamos si el carácter debe ser transformado a leet.
+      for x in Lenguaje_hacker: # Iteramos sobre los caracteres de la lista 'Lenguaje_hacker' para reemplazar el carácter.
+        Lenguaje_hacker.pop(ind_dl) # Eliminamos el carácter sobrante de la lista.
+        ind_dl+=1
+        x = leet[rec_dict] # Obtenemos la transformación leet del diccionario.
+        Lenguaje_hacker.append(x) # Agregamos la transformación leet a la lista.
+        break
       break
+
+cadena_resultante = "".join(Lenguaje_hacker) 
+print(f'{text_usuaio} se a convetido a leet/"lenguaje hacker" --> {cadena_resultante}')
