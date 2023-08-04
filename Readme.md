@@ -1,5 +1,29 @@
+# Reto 2: Lenguaje Hacker (Leet Speak) - Transformador de Texto
+
+>Este es un programa simple en Python que permite transformar un texto ingresado por el usuario en "lenguaje hacker", también conocido como "leet" o "1337". El lenguaje hacker se caracteriza por reemplazar caracteres alfanuméricos con otros símbolos y números.
+
+------------
 
 
+### Descripción
+
+>El programa solicita al usuario que ingrese un texto y luego realiza la conversión a lenguaje hacker utilizando una tabla de reemplazos específica. Puedes encontrar la tabla de reemplazos en el siguiente enlace: [Tabla de Leet Speak](https://www.gamehouse.com/blog/leet-speak-cheat-sheet/).
+
+------------
+
+### Instrucciones
+
+1. Ejecuta el programa en tu entorno de Python preferido.
+
+2. El programa mostrará un mensaje explicando su funcionalidad y te pedirá que ingreses un texto.
+
+3. Ingresa el texto que deseas transformar a lenguaje hacker y presiona Enter.
+
+4. El programa realizará la transformación y mostrará el texto original y su equivalente en lenguaje hacker.
+
+-----------
+### Codigo
+```python
 print("""
   +===============================================================================+
   | Escribe un programa que reciba un texto y transforme lenguaje natural a       |
@@ -11,11 +35,11 @@ print("""
   +===============================================================================+
       """)
 
-def usuarioTexto(): #Esta función solicita al usuario que ingrese un texto y devuelve la entrada como una cadena/str.
+def usuarioTexto(): # Esta función solicita al usuario que ingrese un texto y devuelve la entrada como una cadena/str.
     usuario: str = input("Ingrese un texto --> ")
     return usuario.lower()
 
-leet : dict = { # Diccionario el cual contiene los caracteres del legnuaje leet segundo el alfabeto.
+leet : dict = { # Diccionario el cual contiene los caracteres del lenguaje leet según el alfabeto.
       ' ': ' ',
     'a': '4',
     'b': 'I3',
@@ -56,7 +80,7 @@ leet : dict = { # Diccionario el cual contiene los caracteres del legnuaje leet 
 
 text_usuaio = usuarioTexto()
 
-Lenguaje_hacker : list = [] #Esta lista alamecena los caracters dados por el usuario y luego dentro de ella se convierten en legnauje leet.
+Lenguaje_hacker : list = [] # Esta lista almacena los caracteres dados por el usuario y luego dentro de ella se convierten al lenguaje leet.
 
 ind_dl : int= 0 # Esta variable representa el índice de la lista 'Lenguaje_hacker'.
 for i in text_usuaio: # Iteramos sobre cada carácter del texto ingresado por el usuario.
@@ -72,4 +96,20 @@ for i in text_usuaio: # Iteramos sobre cada carácter del texto ingresado por el
       break
 
 cadena_resultante = "".join(Lenguaje_hacker) 
-print(f'{text_usuaio} se a convetido a leet/"lenguaje hacker" --> {cadena_resultante}')
+print(f'{text_usuaio} se ha convertido a leet/"lenguaje hacker" --> {cadena_resultante}')
+```
+
+------------
+
+
+### Notas
+
+- El programa transforma el texto a minúsculas antes de aplicar la conversión. Por lo tanto, los caracteres en mayúsculas serán transformados a lenguaje hacker en minúsculas.
+
+- La tabla de reemplazos utilizada para la conversión está definida en el diccionario `leet`.
+
+- Se sugiere utilizar la primera opción de cada transformación según la tabla mencionada.
+
+¡Diviértete transformando tus mensajes en lenguaje hacker!
+
+
